@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stilus Cosméticos </title>
+    <link rel="stylesheet" href="estilo.css">
+    <!-- CDN BOOTSTRAP-->
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <h1>Stilus Cosméticos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="perfumes-masculinos.html">Perfumes Masculinos</a></li>
+                <li><a href="perfumes-femininos.html">Perfumes Femininos</a></li>
+                <li><a href="maquiagem.html">Maquiagem</a></li>
+                <li><a href="cosmeticos.html">Cosméticos</a></li>
+                
+            </ul>
+        </nav>
+            <div class="button-group">
+               <!-- <button id="carrinho-toggle">Carrinho</button>-->
+                <button id="login-toggle">Login</button> 
+            </div>
+        </div>
+
+        
+         </header>
+
+   <!-- <main>
+        <div class="container">
+            <h2>Bem-vindo à nossa loja de cosméticos!</h2>
+            <p>Explore nossas categorias e encontre os melhores produtos para você.</p>
+            <div class="product-list">
+                <div class="product">
+                    <h3>Perfume Exemplo</h3>
+                    <p>Preço: R$ 99.99</p>
+                    <button onclick="addToCart('Perfume Exemplo', 99.99)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <h3>Batom Exemplo</h3>
+                    <p>Preço: R$ 29.99</p>
+                    <button onclick="addToCart('Batom Exemplo', 29.99)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </main>-->
+
+    <aside id="cart">
+        <h3>Carrinho de Compras</h3>
+        <ul id="cart-items"></ul>
+        <p>Total: R$ <span id="cart-total">0.00</span></p>
+        <button id="buy-cart">Comprar</button>
+        <button id="clear-cart">Limpar Carrinho</button>
+        
+    </aside> 
+    
+    <div id="notification" class="hidden">Item adicionado ao carrinho!</div>
+
+    <div id="login-form" class="hidden">
+        <h3>Login</h3>
+        <form id="login">
+            <label for="email" class="sr-only">E-mail</label>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <label for="password" class="sr-only">Senha</label>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+     <!--CARROSSEL-->
+<!-- Carousel -->
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+  
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="imagem/02.jpg" alt="imagem 01" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="imagem/03.jpg" alt="imagem 02" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="imagem/06.jpg" alt="imagem 03" class="d-block w-100">
+      </div>
+      
+      
+    </div>
+  
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+   <!--FIM CARROSSEL-->
+  
+  
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Loja de Cosméticos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

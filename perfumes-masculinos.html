@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes Masculinos - Stilus Cosméticos</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>h2 {
+        text-align: center; /* Centraliza o texto */
+        margin: 20px 0; /* Adiciona margem acima e abaixo do título */
+        font-size: 2rem; /* Tamanho da fonte do título */
+        color: #333; /* Cor do texto do título */
+    }</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <h1>Stilus Cosméticos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="perfumes-masculinos.html">Perfumes Masculinos</a></li>
+                <li><a href="perfumes-femininos.html">Perfumes Femininos</a></li>
+                <li><a href="maquiagem.html">Maquiagem</a></li>
+                <li><a href="cosmeticos.html">Cosméticos</a></li>
+                
+            </ul>
+        </nav>
+            <div class="button-group">
+                <button id="carrinho-toggle">Carrinho</button>
+                <button id="login-toggle">Login</button> 
+            </div>
+        </div>
+
+        
+         </header>
+
+    <main>
+        <h2>Perfumes Masculinos</h2>
+
+       
+       <!--linha-->       
+        <div class="product-list row">
+            <div class="product col">
+                <img src="imagem/perfumes masculinos/download.jpg">
+                <h3>Prada</h3>
+                <p class="description">Uma fragrância fresca e aquática que captura a essência do oceano. Notas de limão e grapefruit se combinam com um coração de algas marinhas e lavanda, enquanto um fundo de madeira de sândalo e musk traz uma sensação de tranquilidade. Perfeito para o dia a dia.</p>
+                <p>Preço: R$ 99.99</p>
+                <button onclick="addToCart('Prada', 99.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product col">
+                <img src="imagem/perfumes masculinos/images (5).jpg">
+                <h3>Azzaro</h3>
+                <p class="description">Uma fragrância robusta e refrescante que evoca a grandiosidade das montanhas. Notas de bergamota e menta se misturam com um coração de pinho e lavanda, enquanto um fundo de musgo e âmbar traz profundidade.</p>
+                <p>Preço: R$ 129.99</p>
+                <button onclick="addToCart('Azzaro', 129.99)">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Add more products as needed -->
+        <!--</div>-->
+       
+        <!-- <div class="product-list">-->
+            <div class="product col">
+                <img src="imagem/perfumes masculinos/images (2).jpg">
+                <h3>Noite de aço</h3>
+                <p class="description">um perfume intenso e sofisticado, perfeito para ocasiões noturnas. Com notas de pimenta preta e cardamomo no topo, o coração é composto por couro e madeira de cedro, finalizando com um fundo de baunilha e âmbar. Uma escolha marcante para o homem confiante.</p>
+                <p>Preço: R$ 99.99</p>
+                <button onclick="addToCart('Perfume Noite de aço', 99.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product col">
+                <img src="imagem/perfumes masculinos/shopping (4).webp">
+                <h3>Ferrari</h3>
+                <p class="description"> Um perfume misterioso e sedutor que evoca a beleza do entardecer. Notas de bergamota e lavanda se entrelaçam com um coração de flor de laranjeira e patchouli, finalizando com um fundo de incenso e madeira de guaiaco.</p>
+                <p>Preço: R$ 129.99</p>
+                <button onclick="addToCart('Perfume Ferrari', 129.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product col">
+                <img src="imagem/perfumes masculinos/shopping (5).webp">
+                <h3>Giorgio Armani</h3>
+                <p class="description">Um perfume amadeirado e terroso que evoca a força e a estabilidade. Notas de cardamomo e bergamota se misturam com um coração de carvalho e sândalo, finalizando com um fundo de vetiver e âmbar. Ideal para o homem que aprecia a autenticidade e a natureza.</p>
+                <p>Preço: R$ 99.99</p>
+                <button onclick="addToCart('Perfume Giorgio Armani', 99.99)">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+
+         <!--fim linha-->
+        
+            <!-- Add more products as needed -->
+        </div>
+    </main>
+
+    <aside id="cart">
+        <h3>Carrinho de Compras</h3>
+        <ul id="cart-items"></ul>
+        <p>Total: R$ <span id="cart-total">0.00</span></p>
+        <button id="buy-cart">Comprar</button>
+        <button id="clear-cart">Limpar Carrinho</button>
+    </aside>
+
+    <div id="notification" class="hidden">Item adicionado ao carrinho!</div>
+
+    <div id="login-form" class="hidden">
+        <h3>Login</h3>
+        <form id="login">
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Loja de Cosméticos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

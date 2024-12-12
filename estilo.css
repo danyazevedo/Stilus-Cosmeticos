@@ -1,0 +1,368 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #ff69b4;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff69b4;
+}
+
+/* Main content */
+main {
+    padding: 2rem 0;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: #ff69b4;
+    margin-bottom: 1rem;
+}
+
+/* Product list */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    padding: 2rem;
+}
+
+.product p {
+    color: #666;
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+.product img{
+
+width: 250px;
+ height:200px; 
+}
+/* Buttons */
+button {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+   background-color:none;
+}
+
+/* Cart */
+#cart {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem;
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    width: 300px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+#cart h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#cart-items {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+#cart-items li {
+    border-bottom: 1px solid #eee;
+    padding: 0.5rem 0;
+}
+
+#cart-total {
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+/* Notification */
+#notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#notification.show {
+    opacity: 1;
+}
+
+#login-form {
+    display: none; /* Inicialmente oculta o formulário de login */
+    position: absolute; /* Para que não afete o layout */
+    top: 50px; /* Ajuste conforme necessário para a distância do topo */
+    right: 20px; /* Ajuste conforme necessário para a distância da direita */
+    background-color: white; /* Fundo branco para o formulário */
+    border: 1px solid #ccc; /* Bordas para o formulário */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para o formulário */
+    z-index: 1000; /* Certifique-se de que fique acima de outros elementos */
+}
+
+#login-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ff69b4;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Login button styles */
+#login-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login-toggle:hover {
+    background-color: #ff1493;
+}
+
+  /* Estilo para garantir que o footer fique na parte inferior */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+}
+footer {
+    margin-top: auto; /* Faz o footer ficar na parte inferior */
+    text-align: center; /* Centraliza o texto */
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+
+    #cart {
+        position: static;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 20px;
+    }
+    
+    nav {
+        flex-grow: 1; /* Permite que a navegação ocupe o espaço disponível */
+    }
+    
+    .button-group {
+        display: flex;
+        gap: 10px; /* Espaçamento entre os botões */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.product {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus styles for keyboard navigation */
+button:focus,
+input:focus {
+    outline: 2px solid #ff69b4;
+    outline-offset: 2px;
+}
+
+.carousel-item img
+{
+    
+    height: 750px ;
+    width: 100%;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+
+/* Estilos específicos para o botão de imprimir */
+#print-button {
+    background-color:#ff69b4; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da direita da tela */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+#print-button:hover {
+    background-color:#ff69b4; /* Cor de fundo ao passar o mouse */
+}
+
+#print-button:focus {
+    outline: 2px solid #ff69b4; /* Contorno ao focar no botão */
+    outline-offset: 2px; /* Espaçamento do contorno */
+}
+
+.product {
+    display: flex; /* Usar flexbox para alinhar os itens */
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Centraliza o texto dentro da coluna */
+}
+
+.product button {
+    margin-top: 10px; /* Adiciona um espaço acima do botão */
+    padding: 10px 20px; /* Adiciona espaçamento interno ao botão */
+    background-color: #ff69b4;; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.product button:hover {
+    background-color: #ff69b4; /* Cor de fundo ao passar o mouse */
+}
+
+.description {
+    font-size: 1rem; /* Define um tamanho de fonte consistente para a descrição */
+    color: #666; /* Cor do texto da descrição */
+    margin: 10px 0; /* Margem acima e abaixo da descrição */
+    text-align: center; /* Centraliza o texto da descrição */
+}

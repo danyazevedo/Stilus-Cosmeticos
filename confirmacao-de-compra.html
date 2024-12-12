@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Compra - Stilus Cosméticos</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+    
+    /* Estilos para centralizar a confirmação de compra */
+#purchase-details {
+    display: flex; /* Usar flexbox para centralizar */
+    flex-direction: column; /* Organizar os itens em coluna */
+    align-items: center; /* Centralizar horizontalmente */
+    justify-content: center; /* Centralizar verticalmente */
+    text-align: center; /* Centralizar o texto */
+    margin: 0 auto; /* Centralizar o container */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 600px; /* Largura máxima do container */
+    border: 1px solid #ccc; /* Borda ao redor do container */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Cor de fundo do container */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+}
+
+#purchase-items {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 10px 0; /* Margem acima e abaixo da lista */
+}
+
+#purchase-total {
+    font-weight: bold; /* Destacar o total */
+    margin-top: 10px; /* Margem acima do total */
+}
+
+/* Estilos para o botão "Voltar para a Loja" */
+#back-button {
+    display: inline-block; /* Permite que o botão tenha padding e margin */
+    background-color:#ff69b4; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+    margin-top: 20px; /* Margem acima do botão */
+}
+
+#back-button:hover {
+    background-color:#ff69b4; /* Cor de fundo ao passar o mouse */
+}
+
+#back-button:focus {
+    outline: 2px solid #ff69b4; /* Contorno ao focar no botão */
+    outline-offset: 2px; /* Espaçamento do contorno */
+}
+/* Estilos para o botão "Voltar para a Loja" */
+#back-button {
+    display: inline-block; /* Permite que o botão tenha padding e margin */
+    background-color:#ff69b4; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    left: 20px; /* Distância da esquerda da tela */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+#back-button:hover {
+    background-color:#ff69b4; /* Cor de fundo ao passar o mouse */
+}
+
+#back-button:focus {
+    outline: 2px solid #ff69b4; /* Contorno ao focar no botão */
+    outline-offset: 2px; /* Espaçamento do contorno */
+}
+h2 {
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Adiciona margem acima e abaixo do título */
+    font-size: 2rem; /* Tamanho da fonte do título */
+    color: #333; /* Cor do texto do título */
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Stilus Cosméticos</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="perfumes-masculinos.html">Perfumes Masculinos</a></li>
+                    <li><a href="perfumes-femininos.html">Perfumes Femininos</a></li>
+                    <li><a href="maquiagem.html">Maquiagem</a></li>
+                    <li><a href="cosmeticos.html">Cosméticos</a></li>
+                </ul>
+            </nav>
+         
+        </div>
+    </header>
+
+    <main>
+        <!--<div class="container">
+            <h2>Confirmação de Compra</h2>
+            <div id="purchase-details">
+                <p>Obrigado por sua compra!</p>
+                <p>Detalhes do pedido:</p>
+                <ul id="purchase-items"></ul>
+                <p> <span id="purchase-total"></span></p>
+            </div>
+            <a href="index.html" class="button">Voltar para a Loja</a>
+        </div>-->
+   
+            <div class="container">
+                <h2>Confirmação de Compra</h2>
+                <div id="purchase-details">
+                    <p>Obrigado por sua compra!</p>
+                    <p>Detalhes do pedido:</p>
+                    <ul id="purchase-items"></ul> <!-- Aqui a lista de itens será exibida -->
+                    <p id="purchase-total"></p> <!-- Aqui será exibido o total -->
+                    <button id="print-button" class="button">Imprimir Detalhes da Compra</button>
+
+                </div>
+                <a href="index.html" id="back-button" class="button">Voltar para a Loja</a>
+            </div>
+    </main>
+
+    <!--<ul id="purchase-items"></ul>  Aqui você vai exibir os itens 
+<p id="purchase-total"></p>  Exibe o total da compra -->
+
+
+
+
+
+
+     <!-- Exemplo de estrutura HTML para a confirmação da compra -->
+      
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Loja de Cosméticos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+         // Supondo que o valor total da compra está armazenado no localStorage com a chave "purchaseTotal"
+        const purchaseTotal = localStorage.getItem('purchaseTotal');
+
+        // Seleciona o elemento onde o total da compra será exibido
+        const purchaseTotalElement = document.getElementById('purchase-total');
+
+        // Verifica se o valor existe e exibe no elemento
+        if (purchaseTotal) {
+            purchaseTotalElement.textContent = `Total da compra: R$ ${purchaseTotal}`;
+        } else {
+            purchaseTotalElement.textContent = 'Total da compra: R$ 0,00'; // ou outra mensagem padrão
+        }
+
+        document.getElementById('print-button').addEventListener('click', function () {
+    window.print(); // Abre a caixa de diálogo de impressão
+
+     
+});
+
+        
+    </script>
+   
+</body>
+
+</html>
